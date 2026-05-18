@@ -1,0 +1,40 @@
+.badge-container {
+    position: relative; /* Essential for positioning the tooltip relative to the badge */
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .badge-tooltip {
+    visibility: hidden; /* Hide the tooltip by default */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the badge */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    white-space: nowrap; /* Prevents the text from wrapping */
+  }
+  
+  .badge-container:hover .badge-tooltip {
+    visibility: visible; /* Show the tooltip on hover */
+    opacity: 1;
+  }
+  
+  /* Optional: Add a small arrow for better UI */
+  .badge-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  

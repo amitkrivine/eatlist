@@ -1,0 +1,340 @@
+.eatlist-container {
+    padding: 0;
+    width: 76%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--white);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eatlist-header {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--pale-lavender);
+    margin: 0;
+}
+
+.eatlist-image {
+    width: 190px;
+    height: 190px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 16px 24px 16px 16px;
+    box-shadow: rgba(60, 64, 67, 0.25) 0px 1px 2px 0px, rgba(60, 64, 67, 0.10) 0px 1px 3px 1px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--black);
+}
+
+.eatlist-status {
+    font-size: 13px;
+    color: var(--darker-grey);
+    margin: 0;
+    letter-spacing: 2px;
+    padding-top: 8px;
+}
+
+.eatlist-name {
+    font-size: 64px;
+    font-weight: 600;
+    margin: 0;
+    direction: rtl;
+}
+
+.eatlist-description {
+    font-size: 18px;
+    color: var(--darker-grey);
+    margin: 0;
+    padding: 4px 0 16px 0;
+}
+
+.eatlist-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.eatlist-user {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.user-image {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.stats-text {
+    font-size: 14px;
+    color: var(--pale-lavender);
+    margin: 0;
+    padding: 4px 12px;
+    background-color: var(--soft-purple);
+    border-radius: 12px;
+}
+
+.dots {
+    font-size: 14px;
+    color: var(--dark-amethyst);
+    margin: 0;
+}
+
+.eatlist-action-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding-right: 48px;
+    align-items: center;
+}
+
+.eatlist-action-bar button {
+    height: 44px;
+}
+
+.eatlist-restaurants-table {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px 24px;
+    text-align: center;
+}
+
+.eatlist-restaurants-table thead th {
+    color: var(--indigo-velvet);
+    font-weight: 600!important;
+    border-bottom: 1px solid var(--grey);
+}
+
+.eatlist-restaurant-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0 8px;
+}
+
+.name-and-note-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    vertical-align: middle;
+    gap: 4px;
+    padding: 12px 8px;
+}
+
+.eatlist-restaurant-name {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.eatlist-restaurant-comment span {
+    font-size: 16px;
+}
+
+.eatlist-restaurant-comment {
+    width: fit-content;
+    font-size: 13px;
+    color: var(--black);
+    padding: 4px 16px 4px 16px;
+    text-align: right;
+    background-color: var(--icy-white);
+    border-radius: 16px;
+}
+
+.table-text {
+    color: var(--very-dark-grey);
+    font-size: 14px;
+}
+
+.only-on-small-mobile {
+    display: none;
+}
+
+.dropdown-wrapper {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 84%;
+    right: 0;
+    z-index: 100;
+    background: white;
+    border: 1px solid var(--grey-lavender);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: fit-content;
+    min-width: 200px;
+    padding: 12px 4px;
+}
+
+.menu-alignment {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.dropdown-menu--up {
+    bottom: 100%;
+    top: auto;
+}
+
+.eatlist-restaurant-menu {
+    right: auto!important;
+    left: 10px;
+}
+
+.dropdown-item {
+    background-color: inherit;
+    color: var(--very-dark-grey);
+    border: none;
+    font-size: 16px;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 8px;
+    text-wrap: nowrap;
+}
+
+.dropdown-item span {
+    padding: 0 8px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--pale-lavender);
+    color: var(--indigo-velvet);
+}
+
+@media (width < 1200px) {
+    .eatlist-header {
+        height: 460px;
+    }
+
+    .header-content {
+        margin: 16px 0;
+    }
+}
+
+@media (width < 1024px) {
+    .eatlist-restaurants-table {
+        padding: 4px 12px;
+    }
+}
+
+@media (width < 720px) {
+    .eatlist-container {
+        width: 100%;
+    }
+
+    .header-content {
+        padding-left: 8px;
+    }
+
+    .eatlist-status {
+        font-size: 12px;
+    }
+
+    .eatlist-name {
+        font-size: 36px;
+    }
+
+    .eatlist-description {
+        font-size: 16px;
+    }
+
+    .eatlist-stats {
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .username {
+        font-size: 14px;
+    }
+
+    .stats-text {
+        font-size: 13px;
+    }
+
+    .eatlist-action-bar button {
+        font-size: 14px;
+        padding: 4px 12px;
+    }
+}
+
+@media (width < 560px) {
+    .eatlist-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .eatlist-image {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 0;
+    }
+
+    .eatlist-action-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-right: 12px;
+    }
+
+    .header-content {
+        padding: 0 12px;
+    }
+
+    .eatlist-status, .eatlist-name, .eatlist-description {
+        text-align: center;
+    }
+
+    .eatlist-stats {
+        align-items: center;
+    }
+
+    .eatlist-restaurant-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .eatlist-restaurant-name {
+        font-size: 16px;
+    }
+
+    .eatlist-restaurant-comment {
+        font-size: 12px;
+    }
+
+    .table-text {
+        font-size: 13px;
+    }
+}
+
+@media (width < 380px) {
+    .only-on-small-mobile {
+        display: block;
+    }
+}

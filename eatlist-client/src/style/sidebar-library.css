@@ -1,0 +1,120 @@
+.library, .library-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.library {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.library-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark-amethyst);
+    font-size: 22px;
+}
+
+.library-top-title {
+    font-weight: 500;
+    padding: 0 4px;
+}
+
+.add-btn {
+    color: var(--dark-amethyst);
+    font-size: 22px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-btn:hover {
+    background-color: var(--lavender);
+    color: var(--primary-purple);
+}
+
+.filter-btn {
+    color: var(--dark-grey);
+    font-size: 14px;
+    border: none;
+    background-color: var(--light-grey);
+    cursor: pointer;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+.filter-btn:hover {
+    background-color: var(--lavender);
+    color: var(--primary-purple);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-purple);
+    color: var(--white);
+}
+
+.eatlist-sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 8px 0;
+}
+
+.eatlist-sidebar-card {
+    background-color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.eatlist-card-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: none;
+    margin: 0 4px;
+}
+
+.eatlist-sidebar-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.eatlist-sidebar-card-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 4px 0;
+}
+
+.eatlist-sidebar-card-subtitle {
+    color: var(--dark-grey);
+    font-size: 13px;
+    margin: 0;
+    padding: 4px 0;
+}
+
+.eatlist-sidebar-card:hover {
+    background-color: var(--pale-lavender);
+    color: var(--indigo-velvet);
+}

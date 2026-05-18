@@ -1,0 +1,96 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css";
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  direction: ltr;
+  min-height: 100vh;
+}
+
+/* Colors */
+:root {
+  --dark-amethyst: #2F195F;
+  --indigo-velvet: #442880;
+  --primary-purple: #7353BA;
+  --soft-purple: #A084CA;
+  --lavender: #E1E5F2;
+  --pale-lavender: #F5F3FA;
+  --grey-lavender: #f0ecf6;
+  --black: #0F1020;
+  --white: #FFF;
+  --light-grey: #f1f1f1;
+  --grey: #DADADA;
+  --darker-grey: #999;
+  --dark-grey: #858585;
+  --very-dark-grey: #6b6b6b;
+  --darkest-grey: #404040;
+  --danger: #DB3A34;
+  --light-gold: #f9db6e;
+  --bubblegum: #ED6B86;
+  --icy-white: #ddf5e9;
+  --frozen-water: #C9EDDC;
+  --vibrant-green: #007a53;
+}
+
+/*** Fonts ***/
+/* Language components */
+:lang(he) {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  direction: rtl;
+}
+
+:lang(en) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  direction: ltr;
+  line-height: 1.2;
+}
+
+/* Icons */
+.fa-solid {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+}
+
+/* loader */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 48px 0;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #514b82;
+  animation:
+      l20-1 0.8s infinite linear alternate,
+      l20-2 1.6s infinite linear;
+}
+
+@keyframes l20-1 {
+  0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+  12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+  25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+  50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+  62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+  75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+  100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+}
+
+@keyframes l20-2 {
+  0%    {transform:scaleY(1)  rotate(0deg)}
+  49.99%{transform:scaleY(1)  rotate(135deg)}
+  50%   {transform:scaleY(-1) rotate(0deg)}
+  100%  {transform:scaleY(-1) rotate(-135deg)}
+}

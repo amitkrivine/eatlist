@@ -1,0 +1,144 @@
+.user-page-section {
+    width: 80%;
+}
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+    column-gap: 24px;
+    flex: 1;
+}
+
+.single-user-card {
+    width: 100%;
+    height: 280px;
+    border: 1px solid var(--grey);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    text-decoration: none;
+    align-items: center;
+}
+
+.user-card-image {
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+    height: 240px;
+    min-height:240px;
+    max-height: 240px;
+    border-radius: 12px;
+    border: none;
+    object-fit: cover;
+    margin: 0 24px 0 16px;
+}
+
+.user-banner-header {
+    color: var(--black);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    z-index: 20;
+}
+
+.user-banner-subheader {
+    color: var(--vibrant-green);
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    z-index: 20;
+}
+
+.user-card-info {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    color: var(--dark-grey);
+}
+
+.link-display {
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-cards-section {
+    padding: 8px 64px;
+    width: 90%;
+}
+
+@media (width < 1200px) {
+    .user-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .user-card-image {
+        width: 220px;
+        min-width: 220px;
+        max-width: 220px;
+    }
+
+    .user-card-info {
+        width: 100%;
+    }
+
+    .user-card-info h3 {
+        align-self: center;
+    }
+}
+
+@media (width < 730px) {
+    .user-card-image {
+        width: 120px;
+        min-width: 120px;
+        max-width: 120px;
+        height: 180px;
+        min-height: 180px;
+        max-height: 180px;
+    }
+
+    .user-card-info h3 {
+        font-size: 18px;
+    }
+}
+
+@media (width < 500px) {
+    .single-user-card {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .user-card-image {
+        width: 150px;
+        min-width: 150px;
+        max-width: 150px;
+        height: 120px;
+        min-height: 120px;
+        max-height: 120px;
+        margin-top: 16px;
+    }
+
+    .user-banner-header {
+        font-size: 28px;
+    }
+
+    .user-banner-subheader {
+        font-size: 24px;
+    }
+
+    .user-card-info {
+        margin: 0 16px;
+        text-align: center;
+    }
+}
