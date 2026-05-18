@@ -118,14 +118,12 @@ eatlist/
 | GET | `/api/restaurants/:id` | צפייה במסעדה אחת |
 | PUT | `/api/restaurants/:id` | עדכון מסעדה אחת |
 | PATCH | `/api/restaurants/:id` | לייק/אנלייק |
-
 | GET | `/api/eatlists` | צפייה בכל ה-Eatlists |
 | GET | `/api/eatlists/:id` | צפייה ב-Eatlist אחת |
 | POST | `/api/eatlists` | יצירת Eatlist |
 | PATCH | `/api/eatlists/:id/update` | עדכון Eatlist |
 | PATCH | `/api/eatlists/:id/follow` | עקוב/הפסק לעקוב |
 | POST | `/api/eatlists/:id/restaurants` | הוספת מסעדה ל-Eatlist |
-
 | POST | `/api/users` | הרשמה |
 | POST | `/api/users/login` | התחברות |
 
