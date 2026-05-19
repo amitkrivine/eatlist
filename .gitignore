@@ -1,0 +1,4 @@
+# Ignore node_modules in the root and all subfolders
+node_modules/
+eatlist-client/node_modules/
+eatlist-server/node_modules/

@@ -18,19 +18,6 @@ router.get("/", auth, async (req, res) => {
     }
 });
 
-// /////////// get ealists by userId
-// router.get("/", auth, async (req,res) => {
-//     try {
-//         const eatlists = await Eatlist.find({userId: req.payload._id});
-//         if (!eatlists) return res.status(404).send("Could not find eatlists");
-//         res.status(200).send(restaurant);
-
-//     } catch (error) {
-//         console.log(error);
-//         res.status(500).send("server error");
-//     }
-// })
-
 /////////// get ealist by id
 router.get("/:id", auth, async (req,res) => {
     try {
